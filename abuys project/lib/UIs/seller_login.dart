@@ -81,7 +81,7 @@ class _SellerLoginState extends State<SellerLogin> {
                 margin: const EdgeInsets.fromLTRB(0, 10, 0, 0),
                 child: ElevatedButton(
                   onPressed: () {
-                    Navigator.pushNamed(context, '/seller');
+                    Navigator.pushNamed(context, '/sellerButtomNavigation');
                   },
                   style: ElevatedButton.styleFrom(
                       backgroundColor: Colors.blue[900],

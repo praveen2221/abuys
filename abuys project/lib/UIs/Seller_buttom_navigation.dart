@@ -1,24 +1,26 @@
+import 'package:abuys/UIs/seller_login.dart';
 import 'package:flutter/material.dart';
 
 import 'buyer_Login.dart';
 import 'buyer_home_page.dart';
 import 'my_account_page.dart';
+import 'seller_account_page.dart';
 import 'seller_home_page.dart';
 
-class MyHomePage extends StatefulWidget {
-  const MyHomePage({Key? key}) : super(key: key);
+class SellerButtomNavigation extends StatefulWidget {
+  const SellerButtomNavigation({Key? key}) : super(key: key);
 
   @override
-  State<MyHomePage> createState() => _MyHomePageState();
+  State<SellerButtomNavigation> createState() => _SellerButtomNavigationState();
 }
 
-class _MyHomePageState extends State<MyHomePage> {
+class _SellerButtomNavigationState extends State<SellerButtomNavigation> {
   int _selectedIndex = 0;
-  List _widgetOptions = [
-    const BuyerHomePage(),
+  final List _widgetOptions = [
     const SellerHomePage(),
-    const MyAccountPage(),
-    const BuyerLogin(),
+    const SellerHomePage(),
+    const SellerAccountPage(),
+    const SellerLogin(),
   ];
 
   void _onItemTapped(int index) {
@@ -49,7 +51,7 @@ class _MyHomePageState extends State<MyHomePage> {
           ),
           BottomNavigationBarItem(
             icon: Icon(Icons.notifications),
-            label: "Notifications",
+            label: "Notification",
           ),
         ],
         currentIndex: _selectedIndex,

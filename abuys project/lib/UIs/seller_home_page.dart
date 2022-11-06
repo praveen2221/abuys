@@ -29,7 +29,7 @@ class _SellerHomePageState extends State<SellerHomePage> {
                   Navigator.pushNamed(context, '/sellerLogin');
                 },
                 icon: const Icon(
-                  Icons.login_rounded,
+                  Icons.logout_rounded,
                   color: Colors.indigo,
                 ))
           ],

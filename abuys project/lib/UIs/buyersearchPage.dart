@@ -8,6 +8,14 @@ class BuyerSearchPage extends StatefulWidget {
 }
 
 class _BuyerSearchPageState extends State<BuyerSearchPage> {
+  late String Sabcategory;
+  List listItem = [
+    '05 minutes',
+    '10 minutes',
+    '15 minutes',
+    '20 minutes',
+    '25 minutes'
+  ];
   @override
   Widget build(BuildContext context) {
     String apptitle = "abuys";

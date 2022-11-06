@@ -3,6 +3,7 @@ import 'package:abuys/UIs/main_signup_page.dart';
 import 'package:abuys/UIs/spleash_screen.dart';
 import 'package:flutter/material.dart';
 import 'UIs/Guarantor_forgot_password.dart';
+import 'UIs/Seller_buttom_navigation.dart';
 import 'UIs/Transporter_verification.dart';
 import 'UIs/buttom_natvigation.dart';
 import 'UIs/buyer_Login.dart';
@@ -15,6 +16,8 @@ import 'UIs/buyer_forgot_password.dart';
 import 'UIs/guarantor_login.dart';
 import 'UIs/guarantor_signup_page.dart';
 import 'UIs/main_login_page.dart';
+import 'UIs/my_account_page.dart';
+import 'UIs/seller_account_page.dart';
 import 'UIs/seller_forgot_password.dart';
 import 'UIs/seller_home_page.dart';
 import 'UIs/seller_login.dart';
@@ -66,6 +69,9 @@ class MyApp extends StatelessWidget {
         '/transporterVerification': (context) =>
             const TransporterVerification(),
         '/guarantorVerification': (context) => const GuarantorVerification(),
+        '/myAccountPage': (context) => const MyAccountPage(),
+        '/sellerButtomNavigation': (context) => const SellerButtomNavigation(),
+        '/SellerAccountPage': (context) => const SellerAccountPage(),
       },
     );
   }

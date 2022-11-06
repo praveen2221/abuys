@@ -81,7 +81,11 @@ flutter:
     - assets/Vector.png
     - assets/Rectangle 14.png
     - assets/Rectangle 15.png
-
+    - assets/Ellipse 14.png
+    - assets/Ellipse 15.png
+    - assets/Ellipse 16.png
+    - assets/Ellipse 17.png
+    - assets/Ellipse 18.png
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/assets-and-images/#resolution-aware
 
