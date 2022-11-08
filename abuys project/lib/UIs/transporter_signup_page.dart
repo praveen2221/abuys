@@ -1,3 +1,5 @@
+import 'dart:io';
+
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:image_picker/image_picker.dart';
@@ -30,9 +32,39 @@ class _TransporterSignupPageState extends State<TransporterSignupPage> {
   TextEditingController branchController = TextEditingController();
   TextEditingController bank_pincodeController = TextEditingController();
 
+  File? image;
+  Future pickImage() async {
+    try {
+      final image = await ImagePicker().pickImage(source: ImageSource.gallery);
+      if (image == null) return;
+      final imageTemp = File(image.path);
+      setState(() => this.image = imageTemp);
+    } on PlatformException catch (e) {
+      print('Failed to pick image: $e');
+    }
+  }
+
+  File? _image;
   Future getImage() async {
-    final image = await ImagePicker().pickImage(source: ImageSource.gallery);
-    if (image == null) return;
+    try {
+      final _image = await ImagePicker().pickImage(source: ImageSource.gallery);
+      if (_image == null) return;
+      final imageTemp = File(_image.path);
+      setState(() => this._image = imageTemp);
+    } on PlatformException catch (e) {
+      print('Failed to pick image: $e');
+    }
+  }
+
+  Future pickCamera() async {
+    try {
+      final image = await ImagePicker().pickImage(source: ImageSource.camera);
+      if (image == null) return;
+      final imageTemp = File(image.path);
+      setState(() => this.image = imageTemp);
+    } on PlatformException catch (e) {
+      print('Failed to pick image: $e');
+    }
   }
 
   @override
@@ -117,6 +149,7 @@ class _TransporterSignupPageState extends State<TransporterSignupPage> {
                   border: Border(),
                 ),
                 child: TextField(
+                  maxLength: 10,
                   controller: mobileNumberController,
                   inputFormatters: <TextInputFormatter>[
                     FilteringTextInputFormatter.digitsOnly
@@ -297,12 +330,29 @@ class _TransporterSignupPageState extends State<TransporterSignupPage> {
                           const Text('Upload ID Proof*'),
                           customButton(
                             title: 'Upload',
-                            onClick: getImage,
+                            onClick: pickImage,
                           ),
-                          const Image(
-                            width: 80,
-                            image: AssetImage('assets/Group 95.png'),
-                          )
+                          InkWell(
+                            onTap: () => pickImage(),
+                            child: SizedBox(
+                              width: 100,
+                              height: 100,
+                              child: Container(
+                                decoration: BoxDecoration(
+                                    border: Border.all(color: Colors.black26)),
+                                child: Center(
+                                  child: image == null
+                                      ? const Image(
+                                          image:
+                                              AssetImage('assets/Group 51.png'))
+                                      : Image.file(
+                                          image!,
+                                          fit: BoxFit.fitWidth,
+                                        ),
+                                ),
+                              ),
+                            ),
+                          ),
                         ],
                       ),
                       Column(
@@ -312,10 +362,28 @@ class _TransporterSignupPageState extends State<TransporterSignupPage> {
                             title: 'Upload',
                             onClick: getImage,
                           ),
-                          const Image(
-                            width: 80,
-                            image: AssetImage('assets/Group 95.png'),
-                          )
+                          InkWell(
+                            onTap: () => getImage(),
+                            child: SizedBox(
+                              width: 100,
+                              height: 100,
+                              child: Container(
+                                decoration: BoxDecoration(
+                                    border: Border.all(color: Colors.black26)),
+                                child: Center(
+                                  child: _image == null
+                                      ? const Image(
+                                          image:
+                                              AssetImage('assets/Group 51.png'),
+                                        )
+                                      : Image.file(
+                                          _image!,
+                                          fit: BoxFit.fitWidth,
+                                        ),
+                                ),
+                              ),
+                            ),
+                          ),
                         ],
                       ),
                     ],

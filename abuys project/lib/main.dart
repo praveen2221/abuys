@@ -2,6 +2,7 @@ import 'package:abuys/UIs/Guarantor_verification.dart';
 import 'package:abuys/UIs/main_signup_page.dart';
 import 'package:abuys/UIs/spleash_screen.dart';
 import 'package:flutter/material.dart';
+import 'UIs/Buyer_orders_page.dart';
 import 'UIs/Guarantor_forgot_password.dart';
 import 'UIs/Seller_buttom_navigation.dart';
 import 'UIs/Transporter_verification.dart';
@@ -13,6 +14,9 @@ import 'UIs/buyersearchPage.dart';
 import 'UIs/create_an_account.dart';
 import 'UIs/delivery_conformation.dart';
 import 'UIs/buyer_forgot_password.dart';
+import 'UIs/guarantor_account_page.dart';
+import 'UIs/guarantor_buttom_naivebar.dart';
+import 'UIs/guarantor_home_page.dart';
 import 'UIs/guarantor_login.dart';
 import 'UIs/guarantor_signup_page.dart';
 import 'UIs/main_login_page.dart';
@@ -21,8 +25,12 @@ import 'UIs/seller_account_page.dart';
 import 'UIs/seller_forgot_password.dart';
 import 'UIs/seller_home_page.dart';
 import 'UIs/seller_login.dart';
+import 'UIs/seller_order_page.dart';
 import 'UIs/seller_sign_up.dart';
 import 'UIs/seller_verification.dart';
+import 'UIs/transporter_account_page.dart';
+import 'UIs/transporter_buttom.dart';
+import 'UIs/transporter_home_page.dart';
 import 'UIs/transporter_signup_page.dart';
 import 'UIs/transportor_Login.dart';
 import 'UIs/transportor_forgot_password.dart';
@@ -72,6 +80,16 @@ class MyApp extends StatelessWidget {
         '/myAccountPage': (context) => const MyAccountPage(),
         '/sellerButtomNavigation': (context) => const SellerButtomNavigation(),
         '/SellerAccountPage': (context) => const SellerAccountPage(),
+        '/transporterButtomNaiveBar': (context) =>
+            const TransporterButtomNaiveBar(),
+        '/transporterHomePage': (context) => const TransporterHomePage(),
+        '/transporterAccountPage': (context) => const TransporterAccountPage(),
+        '/guarantorButtomNavigation': (context) =>
+            const GuarantorButtomNavigation(),
+        '/guarantorHomePage': (context) => const GuarantorHomePage(),
+        '/guarantorAccountPage': (context) => const GuarantorAccountPage(),
+        '/buyerOrderPage': (context) => BuyerOrderPage(),
+        '/sellerOrderPage': (context) => SellerOrderPage(),
       },
     );
   }

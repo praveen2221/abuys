@@ -1,11 +1,9 @@
 import 'package:abuys/UIs/seller_login.dart';
 import 'package:flutter/material.dart';
 
-import 'buyer_Login.dart';
-import 'buyer_home_page.dart';
-import 'my_account_page.dart';
 import 'seller_account_page.dart';
 import 'seller_home_page.dart';
+import 'seller_order_page.dart';
 
 class SellerButtomNavigation extends StatefulWidget {
   const SellerButtomNavigation({Key? key}) : super(key: key);
@@ -18,7 +16,7 @@ class _SellerButtomNavigationState extends State<SellerButtomNavigation> {
   int _selectedIndex = 0;
   final List _widgetOptions = [
     const SellerHomePage(),
-    const SellerHomePage(),
+    const SellerOrderPage(),
     const SellerAccountPage(),
     const SellerLogin(),
   ];

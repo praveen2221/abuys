@@ -57,13 +57,15 @@ class _GuarantorLoginState extends State<GuarantorLogin> {
                     ],
                     decoration: const InputDecoration(
                       border: OutlineInputBorder(),
-                      prefixIcon: Icon(Icons.contact_page_outlined),
+                      prefixIcon: Icon(Icons.person),
                       labelText: "Phone number",
                     )),
               ),
               Container(
                 margin: const EdgeInsets.fromLTRB(10, 25, 10, 0),
                 child: const TextField(
+                    obscureText: true,
+                    obscuringCharacter: '*',
                     keyboardType: TextInputType.text,
                     decoration: InputDecoration(
                       border: OutlineInputBorder(),
@@ -77,7 +79,9 @@ class _GuarantorLoginState extends State<GuarantorLogin> {
                 padding: const EdgeInsets.fromLTRB(10, 0, 10, 0),
                 margin: const EdgeInsets.fromLTRB(0, 10, 0, 0),
                 child: ElevatedButton(
-                  onPressed: () {},
+                  onPressed: () {
+                    Navigator.pushNamed(context, '/guarantorButtomNavigation');
+                  },
                   style: ElevatedButton.styleFrom(
                       backgroundColor: Colors.blue[900],
                       textStyle: const TextStyle(

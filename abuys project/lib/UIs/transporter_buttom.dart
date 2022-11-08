@@ -1,24 +1,24 @@
 import 'package:flutter/material.dart';
 
-import 'Buyer_orders_page.dart';
 import 'buyer_Login.dart';
-import 'buyer_home_page.dart';
-import 'my_account_page.dart';
-import 'seller_home_page.dart';
+import 'transporter_account_page.dart';
+import 'transporter_home_page.dart';
+import 'transportor_pickups.dart';
 
-class MyHomePage extends StatefulWidget {
-  const MyHomePage({Key? key}) : super(key: key);
+class TransporterButtomNaiveBar extends StatefulWidget {
+  const TransporterButtomNaiveBar({Key? key}) : super(key: key);
 
   @override
-  State<MyHomePage> createState() => _MyHomePageState();
+  State<TransporterButtomNaiveBar> createState() =>
+      _TransporterButtomNaiveBarState();
 }
 
-class _MyHomePageState extends State<MyHomePage> {
+class _TransporterButtomNaiveBarState extends State<TransporterButtomNaiveBar> {
   int _selectedIndex = 0;
   List _widgetOptions = [
-    const BuyerHomePage(),
-    const BuyerOrderPage(),
-    const MyAccountPage(),
+    const TransporterHomePage(),
+    const TransportorPickups(),
+    const TransporterAccountPage(),
     const BuyerLogin(),
   ];
 

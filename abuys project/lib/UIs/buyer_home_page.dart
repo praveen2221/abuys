@@ -24,11 +24,10 @@ class _BuyerHomePageState extends State<BuyerHomePage> {
   String dropdownvalues = 'Select Address';
   var item = [
     'Select Address',
-    '05 minutes',
-    '10 minutes',
-    '15 minutes',
-    '20 minutes',
-    '25 minutes',
+    'Chennai',
+    'Avadi',
+    'Kolapakkam',
+    'Bangalore',
   ];
 
   @override
@@ -168,13 +167,13 @@ class _BuyerHomePageState extends State<BuyerHomePage> {
                   ),
                 ],
               ),
-              SizedBox(height: 10),
+              const SizedBox(height: 10),
               TextField(
                 cursorColor: Colors.indigo,
                 decoration: InputDecoration(
                     fillColor: Colors.indigo[200],
                     filled: true,
-                    contentPadding: EdgeInsets.all(10),
+                    contentPadding: const EdgeInsets.all(10),
                     border: OutlineInputBorder(
                       gapPadding: 4,
                       borderRadius: BorderRadius.circular(20),
@@ -188,7 +187,7 @@ class _BuyerHomePageState extends State<BuyerHomePage> {
                       color: Colors.indigo,
                     )),
               ),
-              SizedBox(height: 10),
+              const SizedBox(height: 10),
               Row(
                 mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                 children: [
@@ -208,7 +207,6 @@ class _BuyerHomePageState extends State<BuyerHomePage> {
                         Icons.keyboard_arrow_down,
                         color: Colors.indigo,
                       ),
-
                       // Array list of items
                       items: items.map((String items) {
                         return DropdownMenuItem(
@@ -469,7 +467,7 @@ class _BuyerHomePageState extends State<BuyerHomePage> {
                       Navigator.pushNamed(context, '/deliveryConformation');
                     },
                     style: ElevatedButton.styleFrom(
-                        minimumSize: Size(200, 40),
+                        minimumSize: const Size(200, 40),
                         backgroundColor: Colors.blue[900],
                         textStyle: const TextStyle(
                           fontSize: 15,

@@ -54,19 +54,22 @@ class _TransportorLoginState extends State<TransportorLogin> {
               Container(
                 margin: const EdgeInsets.fromLTRB(10, 25, 10, 0),
                 child: TextField(
+                    maxLength: 10,
                     keyboardType: TextInputType.number,
                     inputFormatters: <TextInputFormatter>[
                       FilteringTextInputFormatter.digitsOnly,
                     ],
                     decoration: const InputDecoration(
                       border: OutlineInputBorder(),
-                      prefixIcon: Icon(Icons.contact_page_outlined),
+                      prefixIcon: Icon(Icons.person),
                       labelText: "Phone number",
                     )),
               ),
               Container(
-                margin: const EdgeInsets.fromLTRB(10, 25, 10, 0),
+                margin: const EdgeInsets.fromLTRB(10, 15, 10, 0),
                 child: const TextField(
+                    obscureText: true,
+                    obscuringCharacter: '*',
                     keyboardType: TextInputType.text,
                     decoration: InputDecoration(
                       border: OutlineInputBorder(),
@@ -81,7 +84,7 @@ class _TransportorLoginState extends State<TransportorLogin> {
                 margin: const EdgeInsets.fromLTRB(0, 10, 0, 0),
                 child: ElevatedButton(
                   onPressed: () {
-                    Navigator.pushNamed(context, '/transportorpickups');
+                    Navigator.pushNamed(context, '/transporterButtomNaiveBar');
                   },
                   style: ElevatedButton.styleFrom(
                       backgroundColor: Colors.blue[900],

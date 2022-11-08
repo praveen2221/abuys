@@ -254,35 +254,6 @@ class _TransportorPickupsState extends State<TransportorPickups> {
             ],
           ),
         ),
-        bottomNavigationBar: BottomNavigationBar(
-          iconSize: 30,
-          selectedFontSize: 10,
-          selectedIconTheme:
-              const IconThemeData(color: Colors.indigoAccent, size: 40),
-          selectedItemColor: Colors.indigoAccent,
-          selectedLabelStyle: const TextStyle(fontWeight: FontWeight.normal),
-          unselectedIconTheme: const IconThemeData(
-            color: Colors.black26,
-          ),
-          items: const <BottomNavigationBarItem>[
-            BottomNavigationBarItem(
-              icon: Icon(Icons.home),
-              label: 'Home',
-            ),
-            BottomNavigationBarItem(
-              icon: Icon(Icons.shopping_cart),
-              label: 'Orders',
-            ),
-            BottomNavigationBarItem(
-              icon: Icon(Icons.account_circle),
-              label: 'Account',
-            ),
-            BottomNavigationBarItem(
-              icon: Icon(Icons.notifications),
-              label: 'Notification',
-            ),
-          ],
-        ),
       ),
     );
   }

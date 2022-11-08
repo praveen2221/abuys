@@ -30,8 +30,8 @@ class _BuyerForgotPasswordState extends State<BuyerForgotPassword> {
           padding: const EdgeInsets.all(10),
           child: ListView(
             children: [
+              SizedBox(height: 40),
               Container(
-                  margin: const EdgeInsets.only(top: 40.0),
                   alignment: Alignment.center,
                   height: 70,
                   child: const Image(
@@ -47,7 +47,7 @@ class _BuyerForgotPasswordState extends State<BuyerForgotPassword> {
                     ],
                     decoration: const InputDecoration(
                       border: OutlineInputBorder(),
-                      prefixIcon: Icon(Icons.contact_page_outlined),
+                      prefixIcon: Icon(Icons.email),
                       labelText: "Email Address",
                     )),
               ),

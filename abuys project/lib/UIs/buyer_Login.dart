@@ -18,8 +18,8 @@ class _BuyerLoginState extends State<BuyerLogin> {
       debugShowCheckedModeBanner: false,
       home: Scaffold(
         body: Padding(
-          padding: const EdgeInsets.all(10),
-          child: ListView(
+          padding: const EdgeInsets.all(20),
+          child: Column(
             children: [
               Container(
                   margin: const EdgeInsets.only(top: 40.0),
@@ -54,19 +54,22 @@ class _BuyerLoginState extends State<BuyerLogin> {
               Container(
                 margin: const EdgeInsets.fromLTRB(10, 25, 10, 0),
                 child: TextField(
+                    maxLength: 10,
                     keyboardType: TextInputType.number,
                     inputFormatters: <TextInputFormatter>[
                       FilteringTextInputFormatter.digitsOnly,
                     ],
                     decoration: const InputDecoration(
                       border: OutlineInputBorder(),
-                      prefixIcon: Icon(Icons.contact_page_outlined),
+                      prefixIcon: Icon(Icons.person),
                       labelText: "Phone number",
                     )),
               ),
               Container(
                 margin: const EdgeInsets.fromLTRB(10, 25, 10, 0),
                 child: const TextField(
+                    obscureText: true,
+                    obscuringCharacter: '*',
                     keyboardType: TextInputType.text,
                     decoration: InputDecoration(
                       border: OutlineInputBorder(),
@@ -77,6 +80,7 @@ class _BuyerLoginState extends State<BuyerLogin> {
               // Text('${errorMessage}'),
               Container(
                 height: 50,
+                width: double.infinity,
                 padding: const EdgeInsets.fromLTRB(10, 0, 10, 0),
                 margin: const EdgeInsets.fromLTRB(0, 10, 0, 0),
                 child: ElevatedButton(
@@ -100,10 +104,13 @@ class _BuyerLoginState extends State<BuyerLogin> {
                   child: const Text('Forgotten Password?'),
                 ),
               ),
-              Container(
-                alignment: Alignment.bottomCenter,
-                margin: const EdgeInsets.only(top: 100),
-                child: const Text('Tamil | English'),
+              const Spacer(),
+              Column(
+                children: const [
+                  Center(
+                    child: Text('Tamil | English'),
+                  ),
+                ],
               ),
             ],
           ),
