@@ -53,8 +53,9 @@ dev_dependencies:
   # package. See that file for information about deactivating specific lint
   # rules and activating additional ones.
   flutter_lints: ^2.0.0
-  flutter_otp_text_field: ^1.1.0+2
   flutter_launcher_icons: ^0.10.0
+  carousel_slider: ^4.0.0
+  smooth_page_indicator: ^1.0.0+2
 
 flutter_icons:
     android: true
@@ -91,6 +92,7 @@ flutter:
     - assets/Ellipse 18.png
     - assets/Group 51.png
     - assets/Vector 1.png
+    - assets/Rectangle 9.png
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/assets-and-images/#resolution-aware
 
@@ -103,9 +105,16 @@ flutter:
   # list giving the asset and other descriptors for the font. For
   # example:
   fonts:
-        - family: Schyler
-          fonts:
-            - asset: fonts/MyFlutterApp 2.ttf
+    - family: Raleway
+      fonts:
+         - asset: abuys_app/fonts/Raleway-Regular.ttf
+         - asset: abuys_app/fonts/Raleway-Italic.ttf
+           style: italic
+    - family: RobotoMono
+      fonts:
+         - asset: abuys_app/fonts/RobotoMono-Regular.ttf
+         - asset: abuys_app/fonts/RobotoMono-Bold.ttf
+           weight: 700
 
   #   - family: Trajan Pro
   #     fonts:
