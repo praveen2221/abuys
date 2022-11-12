@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:flutter/services.dart';
 import 'package:flutter_verification_code/flutter_verification_code.dart';
 
 class BuyerVerification extends StatefulWidget {
@@ -17,7 +16,7 @@ class _BuyerVerificationState extends State<BuyerVerification> {
   build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text(
+        title: const Text(
           'Enter OTP',
           style: TextStyle(
               color: Colors.white, fontSize: 25, fontWeight: FontWeight.w900),

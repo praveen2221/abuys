@@ -1,5 +1,8 @@
+// ignore: file_names
+// ignore: file_names
+// ignore: file_names
+// ignore: file_names
 import 'package:flutter/material.dart';
-import 'package:flutter/services.dart';
 import 'package:flutter_verification_code/flutter_verification_code.dart';
 
 class TransporterVerification extends StatefulWidget {
@@ -18,7 +21,7 @@ class _TransporterVerificationState extends State<TransporterVerification> {
     return MaterialApp(
       home: Scaffold(
         appBar: AppBar(
-          title: Text(
+          title: const Text(
             'Enter OTP',
             style: TextStyle(
                 color: Colors.white, fontSize: 25, fontWeight: FontWeight.w900),

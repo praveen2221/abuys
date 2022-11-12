@@ -46,7 +46,7 @@ class _SellectTransportTypeState extends State<SellectTransportType> {
             padding: const EdgeInsets.all(10.0),
             child: Column(
               children: [
-                SizedBox(height: 30),
+                const SizedBox(height: 30),
                 Align(
                   alignment: Alignment.center,
                   child: Text(
@@ -57,7 +57,7 @@ class _SellectTransportTypeState extends State<SellectTransportType> {
                     ),
                   ),
                 ),
-                SizedBox(height: 30),
+                const SizedBox(height: 30),
                 Row(
                   mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                   children: [
@@ -69,7 +69,7 @@ class _SellectTransportTypeState extends State<SellectTransportType> {
                         child: Container(
                           decoration: BoxDecoration(
                               border: Border.all(color: Colors.black26)),
-                          child: Center(
+                          child: const Center(
                             child: Image(
                                 fit: BoxFit.fitWidth,
                                 image: AssetImage('assets/Group 51.png')),
@@ -89,7 +89,7 @@ class _SellectTransportTypeState extends State<SellectTransportType> {
                               child: Container(
                                 decoration: BoxDecoration(
                                     border: Border.all(color: Colors.black26)),
-                                child: Center(
+                                child: const Center(
                                   child: Image(
                                       fit: BoxFit.fitWidth,
                                       image: AssetImage('assets/Group 51.png')),
@@ -102,7 +102,7 @@ class _SellectTransportTypeState extends State<SellectTransportType> {
                     ),
                   ],
                 ),
-                SizedBox(height: 30),
+                const SizedBox(height: 30),
                 Row(
                   mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                   children: [
@@ -114,7 +114,7 @@ class _SellectTransportTypeState extends State<SellectTransportType> {
                         child: Container(
                           decoration: BoxDecoration(
                               border: Border.all(color: Colors.black26)),
-                          child: Center(
+                          child: const Center(
                             child: Image(
                                 fit: BoxFit.fitWidth,
                                 image: AssetImage('assets/Group 51.png')),
@@ -134,7 +134,7 @@ class _SellectTransportTypeState extends State<SellectTransportType> {
                               child: Container(
                                 decoration: BoxDecoration(
                                     border: Border.all(color: Colors.black26)),
-                                child: Center(
+                                child: const Center(
                                   child: Image(
                                       fit: BoxFit.fitWidth,
                                       image: AssetImage('assets/Group 51.png')),
@@ -147,7 +147,7 @@ class _SellectTransportTypeState extends State<SellectTransportType> {
                     ),
                   ],
                 ),
-                SizedBox(height: 20),
+                const SizedBox(height: 20),
                 Container(
                   padding:
                       const EdgeInsets.symmetric(horizontal: 15, vertical: 14),
@@ -168,7 +168,7 @@ class _SellectTransportTypeState extends State<SellectTransportType> {
               ],
             ),
           ),
-          SizedBox(height: 10),
+          const SizedBox(height: 10),
           Padding(
             padding: const EdgeInsets.fromLTRB(30.0, 0, 30.0, 0),
             child: ElevatedButton.icon(
@@ -176,10 +176,10 @@ class _SellectTransportTypeState extends State<SellectTransportType> {
                 Navigator.pushNamed(context, '/checkOutPage');
               },
               style: ElevatedButton.styleFrom(
-                primary: Colors.indigo,
+                backgroundColor: Colors.indigo,
               ),
-              label: Text('Buy'),
-              icon: Icon(Icons.shopping_cart_rounded),
+              label: const Text('Buy'),
+              icon: const Icon(Icons.shopping_cart_rounded),
             ),
           ),
         ],

@@ -10,7 +10,10 @@ import 'ButtomNavigationScreen/buttom_navigation.dart';
 import 'LoginScreen/buyer_Login.dart';
 import 'HomePages/buyer_home_page.dart';
 import 'OTPverificationScreen/buyer_verification.dart';
+import 'OrdersPage/delivery_details.dart';
 import 'PaymentPages/checkOutScreen.dart';
+import 'PaymentPages/my_Alert.dart';
+import 'PaymentPages/payment_page.dart';
 import 'UIs/buyersearchPage.dart';
 import 'SignupScreen/buyer_signup_screen.dart';
 import 'OrdersPage/delivery_conformation.dart';
@@ -99,6 +102,9 @@ class MyApp extends StatelessWidget {
         '/buyerProductDetails': (context) => BuyerProductDetails(),
         '/sellectTransportType': (context) => SellectTransportType(),
         '/checkOutPage': (context) => CheckOutPage(),
+        '/paymentPage': (context) => PaymentPage(),
+        '/myAlert': (context) => MyAlert(),
+        '/deliveryDetails': (context) => DeliveryDetails(),
       },
     );
   }

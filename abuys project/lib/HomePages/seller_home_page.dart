@@ -35,6 +35,7 @@ class _SellerHomePageState extends State<SellerHomePage> {
       final imageTemp = File(image.path);
       setState(() => this.image = imageTemp);
     } on PlatformException catch (e) {
+      // ignore: avoid_print
       print('Failed to pick image: $e');
     }
   }
@@ -495,7 +496,7 @@ class _SellerHomePageState extends State<SellerHomePage> {
                   );
                 },
                 style: ElevatedButton.styleFrom(
-                  primary: Colors.indigo,
+                  backgroundColor: Colors.indigo,
                 ),
                 icon: const Padding(
                   padding: EdgeInsets.only(left: 80.0),

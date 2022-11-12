@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:flutter/services.dart';
 
 class GuarantorHomePage extends StatefulWidget {
   const GuarantorHomePage({Key? key}) : super(key: key);
@@ -31,7 +30,7 @@ class _GuarantorHomePageState extends State<GuarantorHomePage> {
         elevation: 0,
         backgroundColor: Colors.indigo[900],
       ),
-      body: Padding(
+      body: const Padding(
         padding: EdgeInsets.all(8.0),
         child: Center(
           child: Text(

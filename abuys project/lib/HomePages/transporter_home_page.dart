@@ -31,7 +31,7 @@ class _TransporterHomePageState extends State<TransporterHomePage> {
         elevation: 0,
         backgroundColor: Colors.indigo[900],
       ),
-      body: Padding(
+      body: const Padding(
         padding: EdgeInsets.all(8.0),
         child: Center(
           child: Text(

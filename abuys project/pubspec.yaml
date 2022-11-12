@@ -39,8 +39,7 @@ dependencies:
   percent_indicator: ^3.4.0
   image_picker: ^0.8.3+1
   path_provider: ^2.0.8
-  flutter_bloc: ^8.0.1
-  telephony: ^0.2.0
+  toggle_switch: ^2.0.1
   flutter_verification_code: ^1.1.6
 
 dev_dependencies:

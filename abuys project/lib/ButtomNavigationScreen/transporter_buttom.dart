@@ -15,7 +15,7 @@ class TransporterButtomNaiveBar extends StatefulWidget {
 
 class _TransporterButtomNaiveBarState extends State<TransporterButtomNaiveBar> {
   int _selectedIndex = 0;
-  List _widgetOptions = [
+  final List _widgetOptions = [
     const TransporterHomePage(),
     const TransportorPickups(),
     const TransporterAccountPage(),

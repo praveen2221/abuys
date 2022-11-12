@@ -26,9 +26,12 @@ class _TransporterSignupPageState extends State<TransporterSignupPage> {
   TextEditingController stateController = TextEditingController();
   TextEditingController pinCodeController = TextEditingController();
   TextEditingController banknameController = TextEditingController();
+  // ignore: non_constant_identifier_names
   TextEditingController ac_noController = TextEditingController();
+  // ignore: non_constant_identifier_names
   TextEditingController ifsc_codeController = TextEditingController();
   TextEditingController branchController = TextEditingController();
+  // ignore: non_constant_identifier_names
   TextEditingController bank_pincodeController = TextEditingController();
 
   File? image;
@@ -39,6 +42,7 @@ class _TransporterSignupPageState extends State<TransporterSignupPage> {
       final imageTemp = File(image.path);
       setState(() => this.image = imageTemp);
     } on PlatformException catch (e) {
+      // ignore: avoid_print
       print('Failed to pick image: $e');
     }
   }
@@ -46,11 +50,13 @@ class _TransporterSignupPageState extends State<TransporterSignupPage> {
   File? _image;
   Future getImage() async {
     try {
+      // ignore: no_leading_underscores_for_local_identifiers
       final _image = await ImagePicker().pickImage(source: ImageSource.gallery);
       if (_image == null) return;
       final imageTemp = File(_image.path);
       setState(() => this._image = imageTemp);
     } on PlatformException catch (e) {
+      // ignore: avoid_print
       print('Failed to pick image: $e');
     }
   }
@@ -62,6 +68,7 @@ class _TransporterSignupPageState extends State<TransporterSignupPage> {
       final imageTemp = File(image.path);
       setState(() => this.image = imageTemp);
     } on PlatformException catch (e) {
+      // ignore: avoid_print
       print('Failed to pick image: $e');
     }
   }
@@ -323,7 +330,7 @@ class _TransporterSignupPageState extends State<TransporterSignupPage> {
               Row(
                 mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                 children: [
-                  Container(
+                  SizedBox(
                     width: 130,
                     child: Column(
                       children: [
@@ -362,7 +369,7 @@ class _TransporterSignupPageState extends State<TransporterSignupPage> {
                       ],
                     ),
                   ),
-                  Container(
+                  SizedBox(
                     width: 130,
                     child: Column(
                       children: [
@@ -408,9 +415,9 @@ class _TransporterSignupPageState extends State<TransporterSignupPage> {
                 onClick: () {
                   Navigator.pushNamed(context, '');
                 },
-                title: Padding(
-                  padding: const EdgeInsets.only(left: 150.0),
-                  child: const Text('Sign Up'),
+                title: const Padding(
+                  padding: EdgeInsets.only(left: 150.0),
+                  child: Text('Sign Up'),
                 ),
                 color: Colors.white,
               ),

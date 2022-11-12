@@ -47,7 +47,7 @@ class _CheckOutPageState extends State<CheckOutPage> {
                       child: Row(
                         mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                         children: [
-                          Text('Delevery'),
+                          const Text('Delevery'),
                           Checkbox(
                             value: _checkbox,
                             onChanged: (value) {
@@ -56,7 +56,7 @@ class _CheckOutPageState extends State<CheckOutPage> {
                               });
                             },
                           ),
-                          Text('Payment'),
+                          const Text('Payment'),
                           Checkbox(
                             value: _checkbox,
                             onChanged: (value) {
@@ -69,7 +69,7 @@ class _CheckOutPageState extends State<CheckOutPage> {
                       ),
                     ),
                   ),
-                  SizedBox(height: 20),
+                  const SizedBox(height: 20),
                   Container(
                     child: Card(
                       color: Colors.green[200],
@@ -87,7 +87,7 @@ class _CheckOutPageState extends State<CheckOutPage> {
                       ),
                     ),
                   ),
-                  SizedBox(height: 10),
+                  const SizedBox(height: 10),
                   Row(
                     mainAxisAlignment: MainAxisAlignment.start,
                     children: const [
@@ -162,15 +162,18 @@ class _CheckOutPageState extends State<CheckOutPage> {
                   ),
                   Card(
                     child: Row(
+                      mainAxisAlignment: MainAxisAlignment.spaceAround,
                       children: [
                         Row(
                           mainAxisAlignment: MainAxisAlignment.spaceBetween,
                           children: const [
                             Padding(
-                              padding: EdgeInsets.fromLTRB(10, 15, 0, 15),
+                              padding: EdgeInsets.fromLTRB(0, 15, 0, 15),
                               child: Icon(Icons.info),
                             ),
-                            Text('Total'),
+                            SizedBox(width: 30),
+                            Text('Total:'),
+                            SizedBox(width: 20),
                             Text('560'),
                           ],
                         ),
@@ -181,9 +184,16 @@ class _CheckOutPageState extends State<CheckOutPage> {
                             borderRadius: BorderRadius.circular(20),
                             border: Border.all(color: Colors.green),
                           ),
-                          child: Text(
-                            'PROCEED TO PAY',
-                            style: TextStyle(fontSize: 10),
+                          alignment: Alignment.center,
+                          child: InkWell(
+                            onTap: () {
+                              Navigator.pushNamed(context, '/paymentPage');
+                            },
+                            child: const Text(
+                              'PROCEED TO PAY',
+                              style:
+                                  TextStyle(fontSize: 10, color: Colors.blue),
+                            ),
                           ),
                         ),
                       ],

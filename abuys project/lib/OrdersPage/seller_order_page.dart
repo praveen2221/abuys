@@ -251,7 +251,7 @@ class _SellerOrderPageState extends State<SellerOrderPage> {
                       );
                     },
                     style: ElevatedButton.styleFrom(
-                      primary: Colors.indigo,
+                      backgroundColor: Colors.indigo,
                     ),
                   ),
                 ],

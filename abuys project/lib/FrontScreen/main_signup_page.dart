@@ -13,144 +13,123 @@ class _MainSignupPageState extends State<MainSignupPage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: Stack(
-        children: [
-          Expanded(
-            child: Container(
-              padding: EdgeInsets.fromLTRB(20, 20, 20, 10),
-              child: Column(
-                mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                children: [
-                  Flexible(
-                    flex: 2,
-                    child: Container(
-                        margin: const EdgeInsets.only(top: 40.0),
-                        alignment: Alignment.center,
-                        height: 70,
-                        child: const Image(
-                          fit: BoxFit.fitWidth,
-                          image: AssetImage('assets/abuysicon.png'),
-                        )),
+      body: Padding(
+        padding: const EdgeInsets.fromLTRB(20, 20, 20, 10),
+        child: Column(
+          mainAxisAlignment: MainAxisAlignment.spaceBetween,
+          children: [
+            Container(
+                margin: const EdgeInsets.only(top: 40.0),
+                alignment: Alignment.center,
+                height: 70,
+                child: const Image(
+                  fit: BoxFit.fitWidth,
+                  image: AssetImage('assets/abuysicon.png'),
+                )),
+            Container(
+                margin: const EdgeInsets.only(top: 40.0),
+                alignment: Alignment.center,
+                height: 180,
+                child: const Image(
+                  fit: BoxFit.fitWidth,
+                  image: AssetImage(
+                      'assets/Online shopping concept with shopping bags and trolley.png'),
+                )),
+            Column(
+              children: [
+                Center(
+                  widthFactor: Checkbox.width,
+                  child: Column(
+                    children: [
+                      customButton(
+                        onClick: () {
+                          Navigator.pushNamed(context, '/signup');
+                        },
+                        title: Container(
+                          alignment: Alignment.center,
+                          child: const Text(
+                            'Buyer',
+                            style: TextStyle(fontFamily: 'RobotoMono-Regular'),
+                          ),
+                        ),
+                        color: Colors.white,
+                      )
+                    ],
                   ),
-                  Flexible(
-                    flex: 4,
-                    child: Container(
-                        margin: const EdgeInsets.only(top: 40.0),
-                        alignment: Alignment.center,
-                        height: 180,
-                        child: const Image(
-                          fit: BoxFit.fitWidth,
-                          image: AssetImage(
-                              'assets/Online shopping concept with shopping bags and trolley.png'),
-                        )),
+                ),
+                const SizedBox(height: 10),
+                Center(
+                  widthFactor: Checkbox.width,
+                  child: Column(
+                    children: [
+                      customButton(
+                        onClick: () {
+                          Navigator.pushNamed(context, '/sellerSignup');
+                        },
+                        title: Container(
+                          alignment: Alignment.center,
+                          child: const Text(
+                            'Seller',
+                            style: TextStyle(fontFamily: 'RobotoMono-Regular'),
+                          ),
+                        ),
+                        color: Colors.white,
+                      )
+                    ],
                   ),
-                  Flexible(
-                    flex: 5,
-                    child: Column(
-                      children: [
-                        Center(
-                          widthFactor: Checkbox.width,
-                          child: Column(
-                            children: [
-                              customButton(
-                                onClick: () {
-                                  Navigator.pushNamed(context, '/signup');
-                                },
-                                title: Container(
-                                  alignment: Alignment.center,
-                                  child: Text(
-                                    'Buyer',
-                                    style: TextStyle(
-                                        fontFamily: 'RobotoMono-Regular'),
-                                  ),
-                                ),
-                                color: Colors.white,
-                              )
-                            ],
+                ),
+                const SizedBox(height: 10),
+                Center(
+                  widthFactor: Checkbox.width,
+                  child: Column(
+                    children: [
+                      customButton(
+                        onClick: () {
+                          Navigator.pushNamed(context, '/transporterSignup');
+                        },
+                        title: Container(
+                          alignment: Alignment.center,
+                          child: const Text(
+                            'Transportor',
+                            style: TextStyle(fontFamily: 'RobotoMono-Regular'),
                           ),
                         ),
-                        SizedBox(height: 10),
-                        Center(
-                          widthFactor: Checkbox.width,
-                          child: Column(
-                            children: [
-                              customButton(
-                                onClick: () {
-                                  Navigator.pushNamed(context, '/sellerSignup');
-                                },
-                                title: Container(
-                                  alignment: Alignment.center,
-                                  child: Text(
-                                    'Seller',
-                                    style: TextStyle(
-                                        fontFamily: 'RobotoMono-Regular'),
-                                  ),
-                                ),
-                                color: Colors.white,
-                              )
-                            ],
-                          ),
-                        ),
-                        SizedBox(height: 10),
-                        Center(
-                          widthFactor: Checkbox.width,
-                          child: Column(
-                            children: [
-                              customButton(
-                                onClick: () {
-                                  Navigator.pushNamed(
-                                      context, '/transporterSignup');
-                                },
-                                title: Container(
-                                  alignment: Alignment.center,
-                                  child: Text(
-                                    'Transportor',
-                                    style: TextStyle(
-                                        fontFamily: 'RobotoMono-Regular'),
-                                  ),
-                                ),
-                                color: Colors.white,
-                              )
-                            ],
-                          ),
-                        ),
-                        SizedBox(height: 10),
-                        Center(
-                          widthFactor: Checkbox.width,
-                          child: Column(
-                            children: [
-                              customButton(
-                                onClick: () {
-                                  Navigator.pushNamed(
-                                      context, '/guarantorSignup');
-                                },
-                                title: Container(
-                                  alignment: Alignment.center,
-                                  child: Text(
-                                    'Guarantor',
-                                    style: TextStyle(
-                                        fontFamily: 'RobotoMono-Regular'),
-                                  ),
-                                ),
-                                color: Colors.white,
-                              )
-                            ],
-                          ),
-                        ),
-                      ],
-                    ),
+                        color: Colors.white,
+                      )
+                    ],
                   ),
-                  Container(
-                      alignment: Alignment.center,
-                      child: const Text(
-                        'Tamil | English',
-                        style: TextStyle(fontFamily: 'RobotoMono-Regular'),
-                      )),
-                ],
-              ),
+                ),
+                const SizedBox(height: 10),
+                Center(
+                  widthFactor: Checkbox.width,
+                  child: Column(
+                    children: [
+                      customButton(
+                        onClick: () {
+                          Navigator.pushNamed(context, '/guarantorSignup');
+                        },
+                        title: Container(
+                          alignment: Alignment.center,
+                          child: const Text(
+                            'Guarantor',
+                            style: TextStyle(fontFamily: 'RobotoMono-Regular'),
+                          ),
+                        ),
+                        color: Colors.white,
+                      )
+                    ],
+                  ),
+                ),
+              ],
             ),
-          ),
-        ],
+            Container(
+                alignment: Alignment.center,
+                child: const Text(
+                  'Tamil | English',
+                  style: TextStyle(fontFamily: 'RobotoMono-Regular'),
+                )),
+          ],
+        ),
       ),
     );
   }

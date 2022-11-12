@@ -3,8 +3,6 @@ import 'package:flutter/material.dart';
 
 import '../Account_details/guarantor_account_page.dart';
 import '../HomePages/guarantor_home_page.dart';
-import '../Account_details/seller_account_page.dart';
-import '../HomePages/seller_home_page.dart';
 
 class GuarantorButtomNavigation extends StatefulWidget {
   const GuarantorButtomNavigation({Key? key}) : super(key: key);

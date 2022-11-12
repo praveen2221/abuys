@@ -27,7 +27,7 @@ class _LoginScreenState extends State<LoginScreen> {
               width: 123,
               margin: const EdgeInsets.only(top: 40.0),
               child: const Image(
-                fit: BoxFit.fitWidth,
+                fit: BoxFit.cover,
                 image: AssetImage('assets/abuysicon.png'),
               )),
           Container(
@@ -37,11 +37,12 @@ class _LoginScreenState extends State<LoginScreen> {
               child: const Image(
                 image: AssetImage('assets/image1.png'),
               )),
-          const SizedBox(
+          Container(
             width: 200,
-            child: LinearProgressIndicator(
-              minHeight: 10,
-              valueColor: AlwaysStoppedAnimation<Color>(Colors.blueAccent),
+            decoration: BoxDecoration(borderRadius: BorderRadius.circular(30)),
+            child: const LinearProgressIndicator(
+              minHeight: 5,
+              valueColor: AlwaysStoppedAnimation<Color>(Colors.indigo),
             ),
           ),
         ],

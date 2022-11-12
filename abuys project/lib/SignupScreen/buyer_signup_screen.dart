@@ -1,3 +1,5 @@
+// ignore_for_file: non_constant_identifier_names
+
 import 'dart:io';
 
 import 'package:flutter/material.dart';
@@ -40,6 +42,7 @@ class _CreateAnAccountState extends State<CreateAnAccount> {
       final imageTemp = File(image.path);
       setState(() => this.image = imageTemp);
     } on PlatformException catch (e) {
+      // ignore: avoid_print
       print('Failed to pick image: $e');
     }
   }
@@ -52,6 +55,7 @@ class _CreateAnAccountState extends State<CreateAnAccount> {
       final imageTemp = File(_image.path);
       setState(() => this._image = imageTemp);
     } on PlatformException catch (e) {
+      // ignore: avoid_print
       print('Failed to pick image: $e');
     }
   }

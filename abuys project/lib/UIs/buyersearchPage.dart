@@ -1,3 +1,4 @@
+// ignore: file_names
 import 'package:flutter/material.dart';
 
 class BuyerSearchPage extends StatefulWidget {
@@ -8,6 +9,7 @@ class BuyerSearchPage extends StatefulWidget {
 }
 
 class _BuyerSearchPageState extends State<BuyerSearchPage> {
+  // ignore: non_constant_identifier_names
   late String Sabcategory;
   List listItem = [
     '05 minutes',

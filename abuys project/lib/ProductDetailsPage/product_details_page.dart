@@ -1,7 +1,10 @@
 import 'package:abuys/Widgets/RoundedButton.dart';
 import 'package:flutter/material.dart';
+// ignore: depend_on_referenced_packages
 import 'package:carousel_slider/carousel_slider.dart';
+// ignore: depend_on_referenced_packages
 import 'package:smooth_page_indicator/smooth_page_indicator.dart';
+import 'package:toggle_switch/toggle_switch.dart';
 
 class BuyerProductDetails extends StatefulWidget {
   const BuyerProductDetails({Key? key}) : super(key: key);
@@ -23,7 +26,7 @@ class _BuyerProductDetailsState extends State<BuyerProductDetails> {
   @override
   Widget build(BuildContext context) {
     Widget buildImage(String urlImage, index) => Container(
-          margin: EdgeInsets.symmetric(horizontal: 3),
+          margin: const EdgeInsets.symmetric(horizontal: 3),
           color: Colors.grey,
           width: double.infinity,
           child: Image.network(
@@ -66,7 +69,7 @@ class _BuyerProductDetailsState extends State<BuyerProductDetails> {
                   color: Colors.white,
                 )),
           ),
-          SizedBox(width: 10),
+          const SizedBox(width: 10),
         ],
       ),
       body: Padding(
@@ -86,14 +89,14 @@ class _BuyerProductDetailsState extends State<BuyerProductDetails> {
                 ElevatedButton.icon(
                   onPressed: () {},
                   style: ElevatedButton.styleFrom(
-                    primary: Colors.indigo[900],
+                    backgroundColor: Colors.indigo[900],
                   ),
-                  label: Text('Cart'),
-                  icon: Icon(Icons.shopping_cart),
+                  label: const Text('Cart'),
+                  icon: const Icon(Icons.shopping_cart),
                 ),
               ],
             ),
-            SizedBox(height: 10),
+            const SizedBox(height: 10),
             Center(
               child: Column(
                 mainAxisAlignment: MainAxisAlignment.center,
@@ -106,7 +109,7 @@ class _BuyerProductDetailsState extends State<BuyerProductDetails> {
                         enableInfiniteScroll: false,
                         enlargeCenterPage: true,
                         enlargeStrategy: CenterPageEnlargeStrategy.height,
-                        autoPlayInterval: Duration(seconds: 2),
+                        autoPlayInterval: const Duration(seconds: 2),
                         onPageChanged: (index, reason) =>
                             setState(() => activeIndex = index)),
                     itemCount: urlImages.length,
@@ -115,7 +118,7 @@ class _BuyerProductDetailsState extends State<BuyerProductDetails> {
                       return buildImage(urlImage, index);
                     },
                   ),
-                  SizedBox(height: 32),
+                  const SizedBox(height: 32),
                   buildIdicator(),
                 ],
               ),
@@ -249,7 +252,30 @@ class _BuyerProductDetailsState extends State<BuyerProductDetails> {
                 ],
               ),
             ),
-            SizedBox(height: 10),
+            const SizedBox(height: 20),
+            Row(
+              mainAxisAlignment: MainAxisAlignment.spaceAround,
+              children: [
+                ToggleSwitch(
+                  minWidth: 150,
+                  initialLabelIndex: 1,
+                  cornerRadius: 20.0,
+                  activeBgColor: const [Colors.indigo],
+                  activeFgColor: Colors.grey,
+                  inactiveBgColor: Colors.white,
+                  inactiveFgColor: Colors.blueGrey[900],
+                  totalSwitches: 2,
+                  labels: const [
+                    'Abuys Transport',
+                    'Own Transport',
+                  ],
+                  onToggle: (index) {
+                    print('switched to: $index');
+                  },
+                ),
+              ],
+            ),
+            const SizedBox(height: 10),
             Center(
               child: Column(
                 children: [
@@ -257,8 +283,8 @@ class _BuyerProductDetailsState extends State<BuyerProductDetails> {
                       onClick: () {
                         Navigator.pushNamed(context, '/sellectTransportType');
                       },
-                      icon: Icon(Icons.shopping_cart_rounded),
-                      nameText: Text('Buy'),
+                      icon: const Icon(Icons.shopping_cart_rounded),
+                      nameText: const Text('Buy'),
                       color: Colors.white),
                 ],
               ),

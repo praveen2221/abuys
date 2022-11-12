@@ -27,9 +27,12 @@ class _GuarantorSignupPageState extends State<GuarantorSignupPage> {
   TextEditingController stateController = TextEditingController();
   TextEditingController pinCodeController = TextEditingController();
   TextEditingController banknameController = TextEditingController();
+  // ignore: non_constant_identifier_names
   TextEditingController ac_noController = TextEditingController();
+  // ignore: non_constant_identifier_names
   TextEditingController ifsc_codeController = TextEditingController();
   TextEditingController branchController = TextEditingController();
+  // ignore: non_constant_identifier_names
   TextEditingController bank_pincodeController = TextEditingController();
 
   File? image;
@@ -52,6 +55,7 @@ class _GuarantorSignupPageState extends State<GuarantorSignupPage> {
       final imageTemp = File(_image.path);
       setState(() => this._image = imageTemp);
     } on PlatformException catch (e) {
+      // ignore: avoid_print
       print('Failed to pick image: $e');
     }
   }
@@ -63,6 +67,7 @@ class _GuarantorSignupPageState extends State<GuarantorSignupPage> {
       final imageTemp = File(image.path);
       setState(() => this.image = imageTemp);
     } on PlatformException catch (e) {
+      // ignore: avoid_print
       print('Failed to pick image: $e');
     }
   }
@@ -324,7 +329,7 @@ class _GuarantorSignupPageState extends State<GuarantorSignupPage> {
               Row(
                 mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                 children: [
-                  Container(
+                  SizedBox(
                     width: 130,
                     child: Column(
                       children: [
@@ -409,9 +414,9 @@ class _GuarantorSignupPageState extends State<GuarantorSignupPage> {
                 onClick: () {
                   Navigator.pushNamed(context, '');
                 },
-                title: Padding(
-                  padding: const EdgeInsets.only(left: 150.0),
-                  child: const Text('Sign Up'),
+                title: const Padding(
+                  padding: EdgeInsets.only(left: 150.0),
+                  child: Text('Sign Up'),
                 ),
                 color: Colors.white,
               ),

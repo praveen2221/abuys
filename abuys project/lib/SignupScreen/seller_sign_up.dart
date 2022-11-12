@@ -1,3 +1,5 @@
+// ignore_for_file: non_constant_identifier_names
+
 import 'dart:io';
 
 import 'package:flutter/material.dart';
@@ -13,6 +15,7 @@ class SellerSignupPage extends StatefulWidget {
   State<SellerSignupPage> createState() => _SellerSignupPageState();
 }
 
+// ignore: duplicate_ignore
 class _SellerSignupPageState extends State<SellerSignupPage> {
   TextEditingController firstnameController = TextEditingController();
   TextEditingController emailController = TextEditingController();
@@ -30,6 +33,7 @@ class _SellerSignupPageState extends State<SellerSignupPage> {
   TextEditingController ac_noController = TextEditingController();
   TextEditingController ifsc_codeController = TextEditingController();
   TextEditingController branchController = TextEditingController();
+  // ignore: non_constant_identifier_names
   TextEditingController bank_pincodeController = TextEditingController();
   File? image;
   Future pickImage() async {
@@ -39,6 +43,7 @@ class _SellerSignupPageState extends State<SellerSignupPage> {
       final imageTemp = File(image.path);
       setState(() => this.image = imageTemp);
     } on PlatformException catch (e) {
+      // ignore: avoid_print
       print('Failed to pick image: $e');
     }
   }
@@ -46,6 +51,7 @@ class _SellerSignupPageState extends State<SellerSignupPage> {
   File? _image;
   Future getImage() async {
     try {
+      // ignore: no_leading_underscores_for_local_identifiers
       final _image = await ImagePicker().pickImage(source: ImageSource.gallery);
       if (_image == null) return;
       final imageTemp = File(_image.path);
@@ -312,6 +318,7 @@ class _SellerSignupPageState extends State<SellerSignupPage> {
               Row(
                 mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                 children: [
+                  // ignore: sized_box_for_whitespace
                   Container(
                     width: 130,
                     child: Column(
@@ -397,9 +404,9 @@ class _SellerSignupPageState extends State<SellerSignupPage> {
                 onClick: () {
                   Navigator.pushNamed(context, '');
                 },
-                title: Padding(
-                  padding: const EdgeInsets.only(left: 150.0),
-                  child: const Text('Sign Up'),
+                title: const Padding(
+                  padding: EdgeInsets.only(left: 150.0),
+                  child: Text('Sign Up'),
                 ),
                 color: Colors.white,
               ),
